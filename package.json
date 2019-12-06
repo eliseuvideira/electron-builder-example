@@ -1,0 +1,29 @@
+{
+  "name": "electron-project-ch01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Eliseu Videira <eliseuvideira1@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^7.1.3",
+    "electron-builder": "^21.2.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build:macos": "electron-builder --macos --dir",
+    "build:linux": "electron-builder --linux --dir",
+    "build:windows": "electron-builder --win --dir",
+    "dist:macos": "electron-builder --macos",
+    "dist:linux": "electron-builder --linux",
+    "dist:windows": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.my.app.id",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "category": "Utility"
+    }
+  }
+}
